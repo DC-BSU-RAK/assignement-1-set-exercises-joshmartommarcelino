@@ -235,7 +235,7 @@ pre code {
 }
 
 /* Specific box modifications */
-#background-example { background-color: #f8f9fa; color: #333; }
+#background-example { background-color: #f8f9fa; border: 1px solid #dee2e6; color: #333; }
 #border-example { background-color: white; border: 2px solid #333; color: #333; }
 #shadow-example { background-color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; }
 #margin-example { background-color: #4b6cb7; margin: 20px; }
