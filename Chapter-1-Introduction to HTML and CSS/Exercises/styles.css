@@ -71,6 +71,7 @@ ul, ol {
 
 ul li, ol li {
     margin-bottom: 10px;
+    margin: 10px;
 }
 
 /* Adds some spacing and background to the lists */

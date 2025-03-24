@@ -433,7 +433,7 @@ label {
   font-weight: bold;
 }
 
-/* Fix input width issues */
+
 input:not([type="radio"]):not([type="checkbox"]),
 textarea {
   width: 100%;
@@ -472,7 +472,7 @@ select:hover {
   border-color: #6e8efb;
 }
 
-/* Style the dropdown arrow (for modern browsers) */
+/* dropdown arrow */
 select::-ms-expand {
   display: none; /* Remove default arrow in IE */
 }
@@ -483,7 +483,7 @@ select {
   padding-right: 30px; /* Space for arrow */
 }
 
-/* Ensure checkboxes and radio buttons are aligned properly */
+
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
@@ -491,7 +491,7 @@ input[type="checkbox"] {
   vertical-align: middle;
 }
 
-/* Inline label for checkboxes and radio buttons */
+
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
@@ -499,7 +499,7 @@ input[type="radio"] + label {
   font-weight: normal;
 }
 
-/* Fix button width */
+
 button {
   display: inline-block;
   width: auto;
@@ -526,7 +526,7 @@ footer {
   border-radius: 8px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
