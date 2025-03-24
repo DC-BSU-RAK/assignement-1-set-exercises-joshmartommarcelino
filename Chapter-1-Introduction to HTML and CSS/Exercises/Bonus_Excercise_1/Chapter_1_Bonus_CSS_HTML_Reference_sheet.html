@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Quick-Reference Guide</title>
+    <link rel="stylesheet" href="bonus styles.css">
+</head>
+<body>
+    <header>
+      <h1>HTML & CSS Quick Reference Guide</h1>
+      <p>A comprehensive guide to essential HTML tags and CSS properties</p>
+    </header>
+  
+    <nav>
+      <ul>
+        <li><a href="#html-basics">HTML Basics</a></li>
+        <li><a href="#text-tags">Text Tags</a></li>
+        <li><a href="#structural-tags">Structural Tags</a></li>
+        <li><a href="#media-tags">Media Tags</a></li>
+        <li><a href="#form-tags">Form Tags</a></li> 
+        <li><a href="#css-basics">CSS Basics</a></li>
+        <li><a href="#visual-properties">Visual Properties</a></li>
+        <li><a href="#spacing-properties">Spacing Properties</a></li>
+        <li><a href="#text-properties">Text Properties</a></li>
+        <li><a href="#layout-properties">Layout Properties</a></li>
+      </ul>
+    </nav>
+  
+    <section id="html-basics">
+      <h2>HTML Basics</h2>
+      <p class ="paragraph">HTML (HyperText Markup Language) is the standard markup language for creating web pages. Here's the basic structure of an HTML document:</p>
+      
+      <div class="code-container">
+        <div class="code-header">Basic HTML Structure</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+      </div>
+    </section>
+  
+    <section id="text-tags" class="tag-section">
+      <h2>Text Tags</h2>
+      
+      <h3>&lt;h1&gt; through &lt;h6&gt; - Headings</h3>
+      <p>HTML provides six levels of headings, from &lt;h1&gt; (most important) to &lt;h6&gt; (least important).</p>
+      <div class="code-container">
+        <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+  &lt;h2&gt;Subheading&lt;/h2&gt;
+  &lt;h3&gt;Section Heading&lt;/h3&gt;
+  &lt;h4&gt;Subsection Heading&lt;/h4&gt;
+  &lt;h5&gt;Small Heading&lt;/h5&gt;
+  &lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;p&gt; - Paragraph</h3>
+      <p>The paragraph tag defines a paragraph of text.</p>
+      <div class="code-container">
+        <pre><code>&lt;p&gt;This is a paragraph of text. Paragraphs are block-level elements.&lt;/p&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;a&gt; - Anchor (Links)</h3>
+      <p>The anchor tag creates hyperlinks to other web pages or resources.</p>
+      <div class="code-container">
+        <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
+  &lt;a href="page2.html"&gt;Go to Page 2&lt;/a&gt;
+  &lt;a href="#section-id"&gt;Jump to Section&lt;/a&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;strong&gt; and &lt;em&gt; - Text Emphasis</h3>
+      <p>These tags are used to emphasize text. &lt;strong&gt; indicates text of strong importance (typically bold), while &lt;em&gt; indicates emphasized text (typically italic).</p>
+      <div class="code-container">
+        <pre><code>&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; information.&lt;/p&gt;
+  &lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;code&gt; - Code Text</h3>
+      <p>The code tag is used to display programming code or monospaced text.</p>
+      <div class="code-container">
+        <pre><code>&lt;p&gt;The HTML tag for a paragraph is &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;.&lt;/p&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;pre&gt; - Preformatted Text</h3>
+      <p>The pre tag preserves both spaces and line breaks, useful for displaying code blocks.</p>
+      <div class="code-container">
+        <pre><code>&lt;pre&gt;
+  function sayHello() {
+    console.log("Hello, world!");
+  }
+  &lt;/pre&gt;</code></pre>
+      </div>
+    </section>
+  
+    <section id="structural-tags" class="tag-section">
+      <h2>Structural Tags</h2>
+      
+      <h3>&lt;div&gt; - Division</h3>
+      <p>A generic container used to group content for styling and layout purposes.</p>
+      <div class="code-container">
+        <pre><code>&lt;div class="container"&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;Content goes here...&lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;span&gt; - Inline Container</h3>
+      <p>An inline container for grouping text or elements within a line.</p>
+      <div class="code-container">
+        <pre><code>&lt;p&gt;This paragraph contains &lt;span class="highlight"&gt;highlighted text&lt;/span&gt; within it.&lt;/p&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;</h3>
+      <p>Semantic structural elements that describe the purpose of different parts of a webpage.</p>
+      <div class="code-container">
+        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;/header&gt;
+  
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Section Title&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;h3&gt;Article Title&lt;/h3&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Example Company&lt;/p&gt;
+  &lt;/footer&gt;</code></pre>
+      </div>
+    </section>
+  
+    <section id="media-tags" class="tag-section">
+      <h2>Media Tags</h2>
+      
+      <h3>&lt;img&gt; - Image</h3>
+      <p>Embeds an image in the HTML document.</p>
+      <div class="code-container">
+        <pre><code>&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;video&gt; - Video</h3>
+      <p>Embeds a video player in the document.</p>
+      <div class="code-container">
+        <pre><code>&lt;video controls width="320" height="240"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.webm" type="video/webm"&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;</code></pre>
+      </div>
+      
+      <h3>&lt;audio&gt; - Audio</h3>
+      <p>Embeds an audio player in the document.</p>
+      <div class="code-container">
+        <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+  &lt;/audio&gt;</code></pre>
+      </div>
+      <section id="form-tags" class="tag-section">
+        <h2>Form Tags</h2>
+        
+        <h3>&lt;form&gt; - Form Container</h3>
+        <p>The form tag is used to create an HTML form for user input.</p>
+        <div class="code-container">
+          <pre><code>&lt;form action="/submit" method="post"&gt;
+      &lt;!-- Form elements go here --&gt;
+    &lt;/form&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;input&gt; - Input Field</h3>
+        <p>The input tag is used to create various input controls.</p>
+        <div class="code-container">
+          <pre><code>&lt;!-- Text input --&gt;
+    &lt;input type="text" name="username" placeholder="Enter username"&gt;
+    
+    &lt;!-- Password input --&gt;
+    &lt;input type="password" name="password" placeholder="Enter password"&gt;
+    
+    &lt;!-- Email input --&gt;
+    &lt;input type="email" name="email" placeholder="Enter email"&gt;
+    
+    &lt;!-- Number input --&gt;
+    &lt;input type="number" name="age" min="18" max="100"&gt;
+    
+    &lt;!-- Checkbox --&gt;
+    &lt;input type="checkbox" name="subscribe" id="subscribe"&gt;
+    &lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;
+    
+    &lt;!-- Radio buttons --&gt;
+    &lt;input type="radio" name="gender" id="male" value="male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;
+    &lt;input type="radio" name="gender" id="female" value="female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;
+    
+    &lt;!-- Date input --&gt;
+    &lt;input type="date" name="birthday"&gt;
+    
+    &lt;!-- File input --&gt;
+    &lt;input type="file" name="document"&gt;
+    
+    &lt;!-- Hidden input --&gt;
+    &lt;input type="hidden" name="user_id" value="123"&gt;
+    
+    &lt;!-- Submit button --&gt;
+    &lt;input type="submit" value="Submit"&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;label&gt; - Input Label</h3>
+        <p>The label tag defines a label for an input element.</p>
+        <div class="code-container">
+          <pre><code>&lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;select&gt; and &lt;option&gt; - Dropdown List</h3>
+        <p>The select tag creates a dropdown list, and option tags define the available options.</p>
+        <div class="code-container">
+          <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;
+    &lt;select id="country" name="country"&gt;
+      &lt;option value=""&gt;Select a country&lt;/option&gt;
+      &lt;option value="us"&gt;United States&lt;/option&gt;
+      &lt;option value="ca"&gt;Canada&lt;/option&gt;
+      &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;textarea&gt; - Multiline Text Input</h3>
+        <p>The textarea tag creates a multiline text input field.</p>
+        <div class="code-container">
+          <pre><code>&lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4" cols="50"&gt;
+      Default text here...
+    &lt;/textarea&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;button&gt; - Clickable Button</h3>
+        <p>The button tag creates a clickable button.</p>
+        <div class="code-container">
+          <pre><code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+    &lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+    &lt;button type="button" onclick="alert('Hello World!')"&gt;Click Me&lt;/button&gt;</code></pre>
+        </div>
+        
+        <h3>&lt;fieldset&gt; and &lt;legend&gt; - Form Sections</h3>
+        <p>The fieldset tag groups related form elements, and the legend tag provides a caption for the fieldset.</p>
+        <div class="code-container">
+          <pre><code>&lt;fieldset&gt;
+      &lt;legend&gt;Personal Information&lt;/legend&gt;
+      &lt;label for="fname"&gt;First name:&lt;/label&gt;
+      &lt;input type="text" id="fname" name="fname"&gt;
+      &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+      &lt;input type="text" id="lname" name="lname"&gt;
+    &lt;/fieldset&gt;</code></pre>
+        </div>
+        
+        <h4>Form Example</h4>
+        <form>
+          <fieldset>
+            <legend>User Information</legend>
+            <label for="demo-name">Name:</label>
+            <input type="text" id="demo-name" name="demo-name" placeholder="Enter your name">
+            
+            <label for="demo-email">Email:</label>
+            <input type="email" id="demo-email" name="demo-email" placeholder="Enter your email">
+            
+            <label for="demo-password">Password:</label>
+            <input type="password" id="demo-password" name="demo-password">
+            
+            <label for="demo-country">Country:</label>
+            <select id="demo-country" name="demo-country">
+              <option value="">Select your country</option>
+              <option value="us">United States</option>
+              <option value="ca">Canada</option>
+              <option value="uk">United Kingdom</option>
+            </select>
+            
+            <label for="demo-message">Message:</label>
+            <textarea id="demo-message" name="demo-message" rows="4" placeholder="Enter your message"></textarea>
+            
+            <div>
+              <input type="checkbox" id="demo-subscribe" name="demo-subscribe">
+              <label for="demo-subscribe">Subscribe to newsletter</label>
+            </div>
+            
+            <div>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    
+      <section id="css-basics" class="property-section">
+        <h2>CSS Basics</h2>
+        
+        <h3>CSS Syntax</h3>
+        <p>CSS (Cascading Style Sheets) is used to style HTML elements. The basic syntax consists of a selector and a declaration block.</p>
+        <div class="code-container">
+          <pre><code>selector {
+      property: value;
+      property: value;
+    }</code></pre>
+        </div>
+        
+        <h3>CSS Selectors</h3>
+        <p>CSS selectors are used to target specific HTML elements for styling.</p>
+        <div class="code-container">
+          <pre><code>/* Element selector */
+    p {
+      color: blue;
+    }
+    
+    /* Class selector */
+    .highlight {
+      background-color: yellow;
+    }
+    
+    /* ID selector */ </pre></code></div>
+
+    <section id="visual-properties">
+      <h2>Visual Properties</h2>
+      
+      <article class="property-card">
+        <h3>1. background-color</h3>
+        <p>Sets the background color of an element.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { background-color: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li>Color names: <code>red</code>, <code>blue</code>, <code>green</code></li>
+            <li>Hex codes: <code>#f8f9fa</code>, <code>#333333</code></li>
+            <li>RGB/RGBA: <code>rgb(255, 0, 0)</code>, <code>rgba(255, 0, 0, 0.5)</code></li>
+            <li>HSL/HSLA: <code>hsl(0, 100%, 50%)</code>, <code>hsla(0, 100%, 50%, 0.5)</code></li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>body { background-color: #f8f9fa; }</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <div class="example-box" id="background-example"></div>
+          <p class="example-caption">Element with background-color set to #f8f9fa</p>
+        </div>
+      </article>
+      
+      <article class="property-card">
+        <h3>2. border</h3>
+        <p>Defines the border style, width, and color of an element.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { border: width style color; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li>Width: <code>thin</code>, <code>medium</code>, <code>thick</code>, or specific measurement (<code>1px</code>, <code>2em</code>)</li>
+            <li>Style: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code></li>
+            <li>Color: Any color value</li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>div { border: 2px solid #333; }</code></pre>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Individual Properties:</div>
+          <pre><code>border-top: 1px solid black;
+border-right: 2px dashed red;
+border-bottom: 3px dotted green;
+border-left: 4px double blue;</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <div class="example-box" id="border-example"></div>
+          <p class="example-caption">Element with border: 2px solid #333</p>
+        </div>
+      </article>
+      
+      <article class="property-card">
+        <h3>3. box-shadow</h3>
+        <p>Applies shadow effects around an element.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { box-shadow: h-offset v-offset blur spread color; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li>h-offset: Horizontal offset (required)</li>
+            <li>v-offset: Vertical offset (required)</li>
+            <li>blur: Blur radius (optional)</li>
+            <li>spread: Spread radius (optional)</li>
+            <li>color: Shadow color (optional)</li>
+            <li><code>inset</code>: Makes the shadow appear inside the element (optional)</li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>.card { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <div class="example-box" id="shadow-example"></div>
+          <p class="example-caption">Element with box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)</p>
+        </div>
+      </article>
+    </section>
+    
+    <section id="spacing-properties">
+      <h2>Spacing Properties</h2>
+      
+      <article class="property-card">
+        <h3>4. margin</h3>
+        <p>Controls the space around an element (outside its border).</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { margin: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li>Single value: Applies to all sides</li>
+            <li>Two values: <code>top/bottom right/left</code></li>
+            <li>Three values: <code>top right/left bottom</code></li>
+            <li>Four values: <code>top right bottom left</code></li>
+            <li>Auto: Centers the element horizontally</li>
+            <li>Percentage: Relative to the width of the containing element</li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>p { margin: 20px; }
+div { margin: 10px 20px; } /* 10px top/bottom, 20px right/left */</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <div class="example-container">
+            <div class="example-box" id="margin-example"></div>
+          </div>
+          <p class="example-caption">The blue box has margin: 20px</p>
+        </div>
+      </article>
+      
+      <article class="property-card">
+        <h3>5. padding</h3>
+        <p>Controls the space inside an element (between its content and border).</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { padding: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <p>Same as margin (except no <code>auto</code> value)</p>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>button { padding: 10px 15px; }</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <div class="example-box" id="padding-example">Content</div>
+          <p class="example-caption">Element with padding: 20px</p>
+        </div>
+      </article>
+    </section>
+    
+    <section id="text-properties">
+      <h2>Text Properties</h2>
+      
+      <article class="property-card">
+        <h3>6. font-size</h3>
+        <p>Sets the size of the text.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { font-size: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li>Absolute: <code>px</code>, <code>pt</code></li>
+            <li>Relative: <code>em</code>, <code>rem</code>, <code>%</code></li>
+            <li>Keywords: <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code></li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>h1 { font-size: 2em; }
+p { font-size: 16px; }</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <p id="font-example-small">Small text (0.8em)</p>
+          <p id="font-example-medium">Medium text (1em)</p>
+          <p id="font-example-large">Large text (1.5em)</p>
+          <p id="font-example-xlarge">Extra large text (2em)</p>
+        </div>
+      </article>
+      
+      <article class="property-card">
+        <h3>7. text-align</h3>
+        <p>Aligns text inside an element.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { text-align: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li><code>left</code>: Left-aligned text (default)</li>
+            <li><code>center</code>: Centered text</li>
+            <li><code>right</code>: Right-aligned text</li>
+            <li><code>justify</code>: Text is justified (aligned to both the left and right margins)</li>
+          </ul>
+        </div>
+        
+        <div class="code-container">
+          <div class="code-header">Example:</div>
+          <pre><code>p { text-align: center; }</code></pre>
+        </div>
+        
+        <div class="example-preview">
+          <p id="text-align-left">This text is left-aligned</p>
+          <p id="text-align-center">This text is center-aligned</p>
+          <p id="text-align-right">This text is right-aligned</p>
+          <p id="text-align-justify">This text is justified. This is a longer paragraph to demonstrate justification. The text will be spaced to align with both the left and right margins.</p>
+        </div>
+      </article>
+    </section>
+    
+    <section id="layout-properties">
+      <h2>Layout Properties</h2>
+      
+      <article class="property-card">
+        <h3>8. display</h3>
+        <p>Defines how an element is displayed.</p>
+        
+        <div class="code-container">
+          <div class="code-header">Syntax:</div>
+          <pre><code>element { display: value; }</code></pre>
+        </div>
+        
+        <div class="values">
+          <h4>Values:</h4>
+          <ul>
+            <li><code>block</code>: Takes up the full width available</li>
+            <li><code>inline</code>: Takes up only as much width as necessary</li>
+            <li><code>inline-block</code>: Like inline but allows width and height properties</li>
+            <li><code>flex</code>: Creates a flexible container</li>
+            <li><code>grid</code>

@@ -1,0 +1,89 @@
+/* General Styling and Background Image */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+/* Pseudo element to make the background image look translucent */
+body::before {
+    content: "";
+    background-image: url('Pasta-Carbonara-2-3-scaled-3178421136.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* If you adjust this you can control transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Places it behind everything */
+}
+/* Background audio player */
+/* Container for the audio player */
+.audio-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  
+  /* Styling for the background music player */
+  .custom-audio-player {
+    width: 300px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* This centers the background music player */
+  }
+/* Name of the Recipe Styling */
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Description of the Recipe Styling */
+p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Ingredients used and Step on how to make it Headings */
+h2 {
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* List Styling */
+ul, ol {
+    margin-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Adds some spacing and background to the lists */
+ul {
+    background-color: #ffeb94;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+    background-color: #ffeb94;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
