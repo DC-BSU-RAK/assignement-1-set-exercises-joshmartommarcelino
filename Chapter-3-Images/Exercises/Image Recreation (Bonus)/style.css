@@ -14,7 +14,7 @@ div {
     margin: 100px auto;
     width: max-content;
   }
-    /* div#A */
+  /* div#A */
   div:nth-of-type(1) {
     border-color: blueviolet;
     box-shadow: 10px 10px 20px red;
