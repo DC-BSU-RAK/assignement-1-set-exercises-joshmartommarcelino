@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Study Planner | Creative Computing</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Links stylesheet to Online Modern Font Set -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>WebDev Study Planner</h1>
+            <p>Creative Computing Course</p>
+        </div>
+        <div class="user-profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Student Name</span>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li class="active"><a href="#"><i class="fas fa-calendar-alt"></i> Study Plan</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Resources</a></li>
+            <li><a href="#"><i class="fas fa-tasks"></i> Assignments</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Left Column - Calendar and Overview -->
+        <section class="column left-column">
+            <div class="card">
+                <h2>Week Overview</h2>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <span>March 2025</span>
+                        <div>
+                            <button class="icon-button"><i class="fas fa-chevron-left"></i></button>
+                            <button class="icon-button"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar days would go here -->
+                        <div class="calendar-day">Mon</div>
+                        <div class="calendar-day">Tue</div>
+                        <div class="calendar-day">Wed</div>
+                        <div class="calendar-day">Thu</div>
+                        <div class="calendar-day">Fri</div>
+                        <div class="calendar-day">Sat</div>
+                        <div class="calendar-day">Sun</div>
+                        
+                        <!-- Calendar dates -->
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                        <div class="date active">31</div>
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date">5</div>
+                        <div class="date">6</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Module Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Overall Completion</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Completed</h3>
+                            <p>14 tasks</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-spinner"></i>
+                        <div>
+                            <h3>In Progress</h3>
+                            <p>3 tasks</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Upcoming</h3>
+                            <p>8 tasks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Middle Column - Study Tasks -->
+        <section class="column middle-column">
+            <div class="section-header">
+                <h2>Current Study Tasks</h2>
+                <button class="primary-button"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+
+            <!-- Demo Items - 5 study tasks -->
+            <div class="task-list">
+                <!-- Task 1 -->
+                <div class="task-card priority-high">
+                    <div class="task-header">
+                        <h3>JavaScript Event Handlers</h3>
+                        <span class="badge due-soon">Due Tomorrow</span>
+                    </div>
+                    <p>Complete exercises on implementing various event handlers in JavaScript. Focus on click, submit, and keyboard events.</p>
+                    <div class="task-footer">
+                        <div class="task-meta">
+                            <span><i class="fas fa-book"></i> Chapter 7</span>
+                            <span><i class="fas fa-clock"></i> 2 hours</span>
+                        </div>
+                        <button class="secondary-button">Mark Complete</button>
+                    </div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="task-card priority-medium">
+                    <div class="task-header">
+                        <h3>CSS Flexbox Layout</h3>
+                        <span class="badge">Due in 3 days</span>
+                    </div>
+                    <p>Read through the CSS Flexbox documentation and complete the recommended exercises. Build a responsive navigation bar using Flexbox.</p>
+                    <div class="task-footer">
+                        <div class="task-meta">
+                            <span><i class="fas fa-book"></i> Chapter 4</span>
+                            <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                        </div>
+                        <button class="secondary-button">Mark Complete</button>
+                    </div>
+                </div>
+
+                <!-- Task 3 -->
+                <div class="task-card priority-low in-progress">
+                    <div class="task-header">
+                        <h3>HTML Forms & Validation</h3>
+                        <span class="badge in-progress">In Progress</span>
+                    </div>
+                    <p>Create a contact form with client-side validation using HTML5 attributes and JavaScript. Include various input types and custom validation messages.</p>
+                    <div class="task-footer">
+                        <div class="task-meta">
+                            <span><i class="fas fa-book"></i> Chapter 3</span>
+                            <span><i class="fas fa-clock"></i> 2.5 hours</span>
+                        </div>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                            <span>40%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 4 -->
+                <div class="task-card priority-medium">
+                    <div class="task-header">
+                        <h3>Responsive Web Design</h3>
+                        <span class="badge">Due in 5 days</span>
+                    </div>
+                    <p>Study media queries and implement a responsive design for the portfolio project. Ensure it works well on mobile, tablet, and desktop.</p>
+                    <div class="task-footer">
+                        <div class="task-meta">
+                            <span><i class="fas fa-book"></i> Chapter 5</span>
+                            <span><i class="fas fa-clock"></i> 3 hours</span>
+                        </div>
+                        <button class="secondary-button">Mark Complete</button>
+                    </div>
+                </div>
+
+                <!-- Task 5 -->
+                <div class="task-card priority-high">
+                    <div class="task-header">
+                        <h3>API Integration</h3>
+                        <span class="badge due-soon">Due in 2 days</span>
+                    </div>
+                    <p>Learn how to fetch data from a REST API using JavaScript's fetch API. Implement data display with error handling and loading states.</p>
+                    <div class="task-footer">
+                        <div class="task-meta">
+                            <span><i class="fas fa-book"></i> Chapter 9</span>
+                            <span><i class="fas fa-clock"></i> 2.5 hours</span>
+                        </div>
+                        <button class="secondary-button">Mark Complete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column - Resources and Notes -->
+        <section class="column right-column">
+            <div class="card">
+                <h2>Quick Notes</h2>
+                <div class="notes-container">
+                    <textarea placeholder="Add your study notes here..."></textarea>
+                    <button class="secondary-button"><i class="fas fa-save"></i> Save Notes</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Recommended Resources</h2>
+                <ul class="resource-list">
+                    <li>
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="#">JavaScript Fundamentals PDF</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-video"></i>
+                        <a href="#">CSS Grid Tutorial Video</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="#">MDN Web Docs - HTML Reference</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-book"></i>
+                        <a href="#">Recommended Textbook: Chapter 6-8</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Deadlines</h2>
+                <ul class="deadline-list">
+                    <li>
+                        <div class="deadline-info">
+                            <h4>Assignment 2: Portfolio Website</h4>
+                            <p>April 14, 2025</p>
+                        </div>
+                        <span class="deadline-days">14 days left</span>
+                    </li>
+                    <li>
+                        <div class="deadline-info">
+                            <h4>Quiz: JavaScript Basics</h4>
+                            <p>April 5, 2025</p>
+                        </div>
+                        <span class="deadline-days">5 days left</span>
+                    </li>
+                    <li>
+                        <div class="deadline-info">
+                            <h4>Group Project: Phase 1</h4>
+                            <p>April 21, 2025</p>
+                        </div>
+                        <span class="deadline-days">21 days left</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <p>&copy; 2025 Creative Computing - Web Development Module</p>
+        </div>
+        <div class="footer-section">
+            <ul class="footer-links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
