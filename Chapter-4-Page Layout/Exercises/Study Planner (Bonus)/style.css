@@ -1,27 +1,29 @@
 /* style.css for WebDev Study Planner */
-/* Global Styles and Variables */
+
+/* Set up common colors and design values that we can reuse */
 :root {
-    --primary-color: #4a6fa5;
-    --primary-dark: #375d8f;
-    --secondary-color: #6c757d;
-    --success-color: #28a745;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-    --bg-color: #f5f7fa;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --primary-color: #4a6fa5;         /* Main blue color */
+    --primary-dark: #375d8f;         /* Darker blue for hover effects */
+    --secondary-color: #6c757d;      /* Gray color for secondary text */
+    --success-color: #28a745;        /* Green for success or low priority */
+    --warning-color: #ffc107;        /* Yellow for medium priority */
+    --danger-color: #dc3545;         /* Red for urgent or high priority */
+    --light-color: #f8f9fa;          /* Very light background */
+    --dark-color: #343a40;           /* Dark color for headings */
+    --bg-color: #f5f7fa;             /* General background color */
+    --border-radius: 8px;            /* Rounded corners */
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    --transition: all 0.3s ease;     /* Smooth transitions */
 }
 
-/* Base Styles */
+/* Reset default spacing and set up box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body setup: font, colors, and layout */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -32,6 +34,7 @@ body {
     flex-direction: column;
 }
 
+/* Style all links */
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -42,11 +45,12 @@ a:hover {
     color: var(--primary-dark);
 }
 
+/* Remove bullets from lists */
 ul {
     list-style: none;
 }
 
-/* Button Styles */
+/* Basic button style */
 button {
     cursor: pointer;
     border: none;
@@ -55,6 +59,7 @@ button {
     font-weight: 500;
 }
 
+/* Main button style */
 .primary-button {
     background-color: var(--primary-color);
     color: white;
@@ -69,6 +74,7 @@ button {
     background-color: var(--primary-dark);
 }
 
+/* Secondary button style */
 .secondary-button {
     background-color: var(--light-color);
     color: var(--secondary-color);
@@ -81,6 +87,7 @@ button {
     background-color: #e9ecef;
 }
 
+/* Round icon-style button */
 .icon-button {
     background-color: transparent;
     color: var(--secondary-color);
@@ -96,7 +103,7 @@ button {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Header Styles */
+/* Header layout: logo and profile */
 header {
     background-color: white;
     padding: 1rem 2rem;
@@ -128,7 +135,7 @@ header {
     color: var(--secondary-color);
 }
 
-/* Navigation Styles */
+/* Navigation bar style */
 nav {
     background-color: white;
     box-shadow: var(--box-shadow);
@@ -171,7 +178,7 @@ nav li a:hover {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Main Content Layout */
+/* Main page layout */
 main {
     flex: 1;
     display: grid;
@@ -186,7 +193,7 @@ main {
     gap: 1.5rem;
 }
 
-/* Card Styles */
+/* Reusable card layout */
 .card {
     background-color: white;
     border-radius: var(--border-radius);
@@ -200,7 +207,7 @@ main {
     font-size: 1.25rem;
 }
 
-/* Calendar Styles */
+/* Calendar layout */
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -239,7 +246,7 @@ main {
     color: white;
 }
 
-/* Progress Bar Styles */
+/* Progress bar styles */
 .progress-container {
     margin-bottom: 1rem;
 }
@@ -263,7 +270,7 @@ main {
     background-color: var(--primary-color);
 }
 
-/* Stats Styles */
+/* Stats display */
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -291,7 +298,7 @@ main {
     color: var(--secondary-color);
 }
 
-/* Section Header Styles */
+/* Section heading */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -304,7 +311,7 @@ main {
     font-size: 1.25rem;
 }
 
-/* Task List Styles */
+/* Task list section */
 .task-list {
     display: flex;
     flex-direction: column;
@@ -402,7 +409,7 @@ main {
     font-weight: 500;
 }
 
-/* Notes Styles */
+/* Notes section */
 .notes-container {
     display: flex;
     flex-direction: column;
@@ -424,7 +431,7 @@ textarea:focus {
     border-color: var(--primary-color);
 }
 
-/* Resource List Styles */
+/* Resources list */
 .resource-list {
     display: flex;
     flex-direction: column;
@@ -441,7 +448,7 @@ textarea:focus {
     color: var(--primary-color);
 }
 
-/* Deadline List Styles */
+/* Deadlines list */
 .deadline-list {
     display: flex;
     flex-direction: column;
@@ -477,7 +484,7 @@ textarea:focus {
     color: var(--primary-color);
 }
 
-/* Footer Styles */
+/* Footer area */
 footer {
     background-color: white;
     padding: 1.5rem 2rem;
@@ -507,12 +514,12 @@ footer p {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
+/* Layout changes for tablets */
 @media (max-width: 1200px) {
     main {
         grid-template-columns: 1fr 2fr;
     }
-    
+
     .right-column {
         grid-column: span 2;
         display: grid;
@@ -521,27 +528,28 @@ footer p {
     }
 }
 
+/* Layout changes for phones */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
-    
+
     .right-column {
         grid-column: span 1;
         display: flex;
         flex-direction: column;
     }
-    
+
     nav ul {
         justify-content: space-between;
         padding: 0 1rem;
     }
-    
+
     nav li a {
         padding: 1rem 0.5rem;
         font-size: 0.9rem;
     }
-    
+
     .user-profile span {
         display: none;
     }
