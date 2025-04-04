@@ -1,29 +1,29 @@
-  /* div#A */
-  div:nth-of-type(1) {
-    border-color: blueviolet;
-    box-shadow: 10px 10px 20px red;
-  }
+/* Styles for the first div (div#A) */
+div:nth-of-type(1) {
+  border-color: blueviolet;           /* Changes the border color to blueviolet */
+  box-shadow: 10px 10px 20px red;     /* Adds a red shadow outside the box, offset to the bottom-right */
+}
 
-  /* div#B */
-  div:nth-of-type(2) {
-    border-color: lime;
-    box-shadow: inset 10px 10px 7px black;
-    color: black;
-  }
+/* Styles for the second div (div#B) */
+div:nth-of-type(2) {
+  border-color: lime;                         /* Changes the border color to lime green */
+  box-shadow: inset 10px 10px 7px black;      /* Adds a black shadow inside the box */
+  color: black;                               /* Changes the text color to black */
+}
 
-  /* div#C */
-  div:nth-of-type(3) {
-    border: 5px solid orange;
-    border-radius: 30px;
-    box-shadow: 
-      0 0 0 10px blue,
-      0 0 0 20px red,
-      0 0 0 30px green;
-  }
+/* Styles for the third div (div#C) */
+div:nth-of-type(3) {
+  border: 5px solid orange;                   /* Sets a 5 pixel orange border */
+  border-radius: 30px;                        /* Rounds the corners of the box */
+  box-shadow:                                  /* Adds three colored shadow rings around the box */
+    0 0 0 10px blue,                           /* First ring is blue */
+    0 0 0 20px red,                            /* Second ring is red */
+    0 0 0 30px green;                          /* Third ring is green */
+}
 
-  /* div#D */
-  div:nth-of-type(4) {
-    border-color: brown;
-    color: black;
-    text-shadow: 4px 4px 2px black;
-  }
+/* Styles for the fourth div (div#D) */
+div:nth-of-type(4) {
+  border-color: brown;                        /* Changes the border color to brown */
+  color: black;                               /* Changes the text color to black */
+  text-shadow: 4px 4px 2px black;             /* Adds a black shadow behind the text */
+}

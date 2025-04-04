@@ -1,16 +1,17 @@
+/* Styles all <div> elements on the page */
 div {
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 20px;
-    margin: 25px;
-    border: 4px solid black;
-    line-height: 100px;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-  }
-  
-  body {
-    margin: 100px auto;
-    width: max-content;
-  }
+  display: inline-block;         /* Makes the divs sit next to each other in a line */
+  font-family: sans-serif;       /* Uses a clean, modern font with no extra strokes */
+  font-size: 20px;               /* Makes the text inside the divs 20 pixels tall */
+  margin: 25px;                  /* Adds space around each div (outside the border) */
+  border: 4px solid black;       /* Adds a black border that is 4 pixels thick */
+  line-height: 100px;            /* Vertically centers the text by setting the line height */
+  text-align: center;            /* Centers the text horizontally inside the box */
+  width: 200px;                  /* Sets the width of each div to 200 pixels */
+  height: 200px;                 /* Sets the height of each div to 200 pixels */
+}
+/* Styles the body (the main area of the page) */
+body {
+  margin: 100px auto;            /* Adds space around the page and centers it horizontally */
+  width: max-content;            /* Shrinks the page width to just fit the content inside */
+}

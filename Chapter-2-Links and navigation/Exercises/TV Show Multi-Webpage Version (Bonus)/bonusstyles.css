@@ -1,123 +1,144 @@
+/* General body settings */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FCFBF4;
-    color: #333;
+    font-family: Arial, sans-serif; /* Sets the font of the page to Arial or any sans-serif font */
+    margin: 0; /* Removes default margin around the page */
+    padding: 0; /* Removes default padding inside the body */
+    background-color: #FCFBF4; /* Light background color for the page */
+    color: #333; /* Dark text color for good readability */
 }
 
+/* Navigation bar style */
 nav {
-    background-color: #3388BB;
-    padding: 50px;  
-    text-align: center;
+    background-color: #3388BB; /* Blue background for the navigation bar */
+    padding: 50px; /* Adds space inside the navigation bar */
+    text-align: center; /* Centers the navigation links horizontally */
 }
 
+/* Removes default list style (bullets) for the navigation links */
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; 
+    padding: 0; /* Removes any padding around the list */
 }
 
+/* Each list item in the navigation menu */
 nav ul li {
-    display: inline;
-    margin: 0 75px;  
+    display: inline; /* Displays the list items in a row (horizontally) */
+    margin: 0 75px; /* Adds space between each menu item */
 }
 
+/* Style for navigation links */
 nav ul li a {
-    color: #FCFBF4;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;  
+    color: #FCFBF4; /* Sets the link text color to light color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 15px; /* Sets the font size for the navigation links */
 }
 
+/* Main content section */
 section {
-    padding: 200px;  
-    max-width: 6000px;  
-    margin: auto;
-    background: white;
-    margin-top: 20px;  
-    border-radius: 50px;  
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);  
+    padding: 200px; /* Adds space inside the section */
+    max-width: 6000px; /* Limits the width of the section */
+    margin: auto; /* Centers the section in the middle of the page */
+    background: white; /* White background for the section */
+    margin-top: 20px; /* Adds space above the section */
+    border-radius: 50px; /* Rounds the corners of the section */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); /* Adds a light shadow around the section */
 }
 
-h1, h2 
-{
-    color: #3388BB;
-    font-size: 30px; 
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
-    font-size: 28px;
-    
+/* Styles for main headings (h1 and h2) */
+h1, h2 {
+    color: #3388BB; /* Blue color for headings */
+    font-size: 30px; /* Sets the font size */
+    margin-bottom: 20px; /* Adds space below the heading */
+    padding-bottom: 10px; /* Adds space below the text */
+    border-bottom: 2px solid #f0f0f0; /* Adds a thin line below the heading */
+    font-size: 28px; /* Sets font size again for h2 for consistency */
 }
+
+/* Style for subheadings (h3) */
 h3 {
-    color: #3388BB;
-    margin-bottom: 10px;
-    font-size: 22px;
+    color: #3388BB; /* Blue color for subheadings */
+    margin-bottom: 10px; /* Adds space below the subheading */
+    font-size: 22px; /* Sets the font size for h3 */
 }
 
+/* Paragraph styling */
 p {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Adds space below each paragraph */
 }
-.info-grid 
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
+
+/* Grid layout for the 'info' section */
+.info-grid {
+    display: grid; /* Uses CSS grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Automatically creates columns that are at least 350px wide */
+    gap: 20px; /* Adds space between the grid items */
 }
+
+/* List style for the cast members */
 .cast-list {
-    column-count: 2;
-    list-style-position: inside;
-    margin-left: 20px;
+    column-count: 2; /* Displays the list in two columns */
+    list-style-position: inside; /* Places the bullet points inside the list items */
+    margin-left: 20px; /* Adds space to the left of the list */
 }
 
+/* Style for each cast member item */
 .cast-list li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adds space below each list item */
 }
+
+/* Character section styling */
 .character {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 25px; /* Adds space below each character section */
+    padding-bottom: 15px; /* Adds space below the content */
+    border-bottom: 1px solid #f0f0f0; /* Adds a thin line under each character section */
 }
 
+/* Removes the bottom border from the last character section */
 .character:last-child {
-    border-bottom: none;
+    border-bottom: none; /* No border for the last character */
 }
+
+/* Review box styling */
 .review {
-    background-color: #f9f9f9;
-    border-left: 4px solid #3388BB;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 0 5px 5px 0;
+    background-color: #f9f9f9; /* Light grey background for reviews */
+    border-left: 4px solid #3388BB; /* Adds a blue line on the left side */
+    padding: 15px; /* Adds space inside the review box */
+    margin-bottom: 20px; /* Adds space below the review box */
+    border-radius: 0 5px 5px 0; /* Rounds the right side corners of the review box */
 }
 
+/* Style for the citation (author) of the review */
 .review cite {
-    display: block;
-    text-align: right;
-    font-style: italic;
-    color: #666;
+    display: block; /* Makes the citation appear on its own line */
+    text-align: right; /* Aligns the citation to the right */
+    font-style: italic; /* Italicizes the citation text */
+    color: #666; /* Sets a lighter grey color for the citation */
 }
 
+/* Button styling */
 .button {
-    display: inline-block;
-    padding: 50px 75px;  
-    background-color: #3388BB;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;  
-    margin-top: 50px;  
-    font-size: 20px;  
+    display: inline-block; /* Makes the button behave like an inline element, but allows for block-level styling */
+    padding: 50px 75px; /* Adds space inside the button */
+    background-color: #3388BB; /* Blue background color for the button */
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the button text bold */
+    border-radius: 25px; /* Rounds the corners of the button */
+    margin-top: 50px; /* Adds space above the button */
+    font-size: 20px; /* Sets the font size for the button */
 }
 
+/* Hover effect for the button */
 .button:hover {
-    background-color: #3388BB;
+    background-color: #3388BB; /* Keeps the background the same color when the button is hovered */
 }
-footer 
-{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-    font-size: 14px;
-    margin-top: 50px;
+
+/* Footer style */
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Centers the text in the footer */
+    padding: 50px 0; /* Adds space inside the footer */
+    font-size: 14px; /* Sets the font size for the footer text */
+    margin-top: 50px; /* Adds space above the footer */
 }

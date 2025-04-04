@@ -1,97 +1,112 @@
+/* Set the default font and background for the whole page */
 body {
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    margin: 0;
-    color: #000;
-    background: #fff;
-  }
-  
-  header {
-    background-color: #17072b;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    font-family: Tahoma, sans-serif;
-    font-weight: 700;
-  }
-  
-  header h1 {
-    margin: 0;
-    text-decoration: underline;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-    list-style: none;
-    margin: 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  main {
-    display: flex;
-    padding: 2rem;
-    gap: 2rem;
-  }
-  
-  .welcome {
-    flex: 1 ;
-  }
-  
-  .welcome h2 {
-    font-weight: 700;
-    border-bottom: 3px solid #000;
-    display: inline-block;
-  }
-  
-  .welcome img {
-    height: 72.7%;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  
-  .lineup {
-    flex: 1;
-    background-color: #172d67;
-    color: #fff;
-    padding: 1.5rem;
-    max-height: 900px;
-  }
-  
-  .lineup h2 {
-    font-weight: 700;
-    text-decoration: underline;
-  }
-  
-  .lineup ul {
-    padding-left: 1rem;
-  }
-  
-  .lineup li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .images {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5rem;
-  }
-  
-  .images img {
-    width: 48%;
-    height: auto;
-  }
-  
-  footer {
-    background-color: #8c15e9;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
+  font-family: Arial, sans-serif; /* Sets the main font */
+  font-weight: 400;               /* Normal font weight */
+  margin: 0;                      /* Removes default space around the page */
+  color: #000;                    /* Sets text color to black */
+  background: #fff;              /* Sets background color to white */
+}
+
+/* Styles for the top of the page */
+header {
+  background-color: #17072b;     /* Dark purple background */
+  color: #fff;                   /* White text */
+  text-align: center;            /* Centers the text */
+  padding: 1rem 0;               /* Adds space above and below the text */
+  font-family: Tahoma, sans-serif; /* Sets a different font just for the header */
+  font-weight: 700;              /* Makes the text bold */
+}
+
+/* Styles the main heading in the header */
+header h1 {
+  margin: 0;                     /* Removes default space */
+  text-decoration: underline;   /* Adds a line under the text */
+}
+
+/* Styles the navigation menu list */
+nav ul {
+  display: flex;                /* Puts the menu items in a row */
+  justify-content: center;     /* Centers the menu */
+  gap: 2rem;                    /* Adds space between each item */
+  padding: 1rem 0;              /* Adds space above and below */
+  list-style: none;            /* Removes the bullet points */
+  margin: 0;                    /* Removes default margin */
+}
+
+/* Styles the navigation menu links */
+nav a {
+  color: #fff;                  /* Makes links white */
+  text-decoration: none;       /* Removes underline from links */
+}
+
+/* Styles the main content section */
+main {
+  display: flex;                /* Puts sections side by side */
+  padding: 2rem;                /* Adds space around the content */
+  gap: 2rem;                    /* Adds space between sections */
+}
+
+/* Styles the welcome section */
+.welcome {
+  flex: 1;                      /* Takes up half of the space */
+}
+
+/* Styles the heading in the welcome section */
+.welcome h2 {
+  font-weight: 700;             /* Makes the text bold */
+  border-bottom: 3px solid #000; /* Adds a black underline */
+  display: inline-block;        /* Shrinks border to just under the text */
+}
+
+/* Styles the image in the welcome section */
+.welcome img {
+  height: 72.7%;                /* Sets the image height */
+  width: 100%;                  /* Makes the image stretch across the section */
+  margin-top: 1rem;             /* Adds space above the image */
+}
+
+/* Styles the line-up section (sidebar) */
+.lineup {
+  flex: 1;                      /* Takes up half of the space */
+  background-color: #172d67;   /* Dark blue background */
+  color: #fff;                  /* White text */
+  padding: 1.5rem;              /* Adds space inside the box */
+  max-height: 900px;            /* Limits how tall it can be */
+}
+
+/* Styles the heading in the line-up section */
+.lineup h2 {
+  font-weight: 700;             /* Makes the text bold */
+  text-decoration: underline;   /* Underlines the text */
+}
+
+/* Styles the list in the line-up section */
+.lineup ul {
+  padding-left: 1rem;           /* Adds space on the left side of the list */
+}
+
+/* Styles each item in the list */
+.lineup li {
+  margin-bottom: 0.5rem;        /* Adds space below each item */
+}
+
+/* Styles the image container inside the lineup section */
+.images {
+  display: flex;                /* Puts images next to each other */
+  justify-content: space-between; /* Spaces them apart evenly */
+  margin-top: 5rem;             /* Adds space above the images */
+}
+
+/* Styles the images inside the container */
+.images img {
+  width: 48%;                   /* Each image takes up almost half the width */
+  height: auto;                 /* Keeps image proportions correct */
+}
+
+/* Styles the bottom of the page */
+footer {
+  background-color: #8c15e9;    /* Purple background */
+  color: #fff;                  /* White text */
+  text-align: center;           /* Centers the text */
+  padding: 1rem 0;              /* Adds space above and below the text */
+}
