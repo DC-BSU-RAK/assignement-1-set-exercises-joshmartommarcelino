@@ -1,0 +1,57 @@
+/* Using colors from the Rick Astley image */
+:root {
+    --dark-blue: #2d3b55;
+    --light-purple: #c9c1d5;
+    --white: #ffffff;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Creating gradient background similar to the poster */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-blue) 50%, var(--light-purple) 100%);
+    font-family: Arial, sans-serif;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* Container for video with some styling */
+.video-container {
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Video styling */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional title styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional song title styling */
+h2 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
