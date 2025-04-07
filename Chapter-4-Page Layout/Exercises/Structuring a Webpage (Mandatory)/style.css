@@ -71,7 +71,7 @@ main {
   background-color: #172d67;   /* Dark blue background */
   color: #fff;                  /* White text */
   padding: 1.5rem;              /* Adds space inside the box */
-  max-height: 900px;            /* Limits how tall it can be */
+  max-height: 638px;            /* Limits how tall it can be */
 }
 
 /* Styles the heading in the line-up section */
