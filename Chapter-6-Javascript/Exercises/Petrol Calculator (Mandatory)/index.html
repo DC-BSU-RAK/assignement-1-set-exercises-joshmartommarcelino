@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main calculator container -->
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <!-- Calculator title and description -->
+            <div class="fuel-icon"></div>
+            <h1>Petrol Calculator</h1>
+            <p>Calculate your total petrol cost in AED</p>
+        </div>
+
+        <!-- Input form for petrol calculation -->
+        <div class="calculator-form">
+            <!-- Input field for price per liter -->
+            <div class="form-group">
+                <label for="pricePerLiter">Price per Liter (AED)</label>
+                <div class="input-container">
+                    <input type="number" id="pricePerLiter" value="1.72" min="0.01" step="0.01">
+                </div>
+            </div>
+
+            <!-- Input field for liters purchased -->
+            <div class="form-group">
+                <label for="litersPurchased">Liters Purchased</label>
+                <div class="input-container">
+                    <input type="number" id="litersPurchased" value="0" min="0" step="0.01">
+                </div>
+            </div>
+
+            <!-- Calculate button -->
+            <button class="calculate-btn" id="calculateBtn">Calculate Total</button>
+        </div>
+
+        <!-- Result container to display calculation result -->
+        <div class="result-container">
+            <div class="result-label">Total Cost</div>
+            <p class="result-value" id="totalCost">AED 0.00</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

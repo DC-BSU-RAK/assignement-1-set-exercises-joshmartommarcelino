@@ -1,0 +1,162 @@
+/* Set default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font for the whole page */
+}
+
+/* Style for the body of the page */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+    min-height: 100vh; /* Makes sure it fills the full height of the screen */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding: 20px;
+}
+
+/* The box that holds the calculator */
+.calculator-container {
+    background-color: white;
+    border-radius: 12px; /* Rounds the corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    padding: 30px;
+    width: 100%;
+    max-width: 450px; /* Limits how wide it gets */
+}
+
+/* The top part of the calculator with the title */
+.calculator-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.calculator-header h1 {
+    color: #34495e;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.calculator-header p {
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+/* Each form field (label + input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+/* Style for the text input boxes */
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Adds color and glow when input is selected */
+.form-group input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Style for the calculate button */
+.calculate-btn {
+    background-color: #2ecc71; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* When you hover over the button */
+.calculate-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px); /* Moves it up slightly */
+}
+
+/* When you click the button */
+.calculate-btn:active {
+    transform: translateY(0); /* Moves it back down */
+}
+
+/* The box that shows the result */
+.result-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Label text in the result box */
+.result-label {
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Big green number in the result box */
+.result-value {
+    color: #2ecc71;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Container for input with a currency icon inside */
+.input-container {
+    position: relative;
+}
+
+/* Position of the currency icon inside the input */
+.currency-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+/* Adds space so the text doesn't cover the icon */
+.has-currency {
+    padding-left: 35px;
+}
+
+/* Design for the yellow fuel icon */
+.fuel-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #f1c40f;
+    border-radius: 50%; /* Makes it a circle */
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(241, 196, 15, 0.3); /* Shadow to make it stand out */
+}
+
+/* Places the fuel emoji in the center of the circle */
+.fuel-icon::before {
+    content: "⛽";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}

@@ -1,4 +1,4 @@
-// Elements
+// Get all the elements we need from the page
 const audioPlayer = document.getElementById('audio-player');
 const prevBankBtn = document.getElementById('prev-bank');
 const nextBankBtn = document.getElementById('next-bank');
@@ -7,131 +7,107 @@ const sampleBanks = document.querySelectorAll('.sample-bank');
 const sayItBtn = document.getElementById('say-it');
 const speechTextArea = document.getElementById('speech-text');
 
-// State
+// Keeps track of which sample bank is showing
 let currentBankIndex = 0;
 const totalBanks = sampleBanks.length;
 
-// Initialize the soundboard
+// Set up the soundboard when the page is ready
 function initSoundboard() {
-    // Set up sample bank navigation
-    updateNavigationButtons();
-    
-    // Add event listeners to all sample elements
+    updateNavigationButtons(); // Show/hide buttons depending on the bank
+
+    // Add click events to every sound sample
     const samples = document.querySelectorAll('.sample');
     samples.forEach(sample => {
         sample.addEventListener('click', () => {
             playSample(sample.getAttribute('data-sample'));
         });
     });
-    
-    // Add event listeners for navigation
+
+    // Add click events for next/previous buttons
     prevBankBtn.addEventListener('click', navigatePreviousBank);
     nextBankBtn.addEventListener('click', navigateNextBank);
-    
-    // Set up text-to-speech functionality
+
+    // Set up the button for reading text out loud
     sayItBtn.addEventListener('click', speakText);
-    
-    // Load sample durations dynamically
+
+    // (Optional) Load audio durations – placeholder only
     loadAudioDurations();
 }
 
-// Function to play an audio sample
+// Play the selected sound file
 function playSample(sampleFile) {
-    // Set the source of the audio player
-    audioPlayer.src = `audio/${sampleFile}`;
-    
-    // Play the audio
+    audioPlayer.src = `audio/${sampleFile}`; // Set file path
     audioPlayer.play().catch(error => {
         console.error('Error playing audio:', error);
-        alert('Could not play audio. Make sure the audio file exists and is in the correct format.');
+        alert('Could not play audio. Check the file and format.');
     });
 }
 
-// Function to navigate to previous bank
+// Go to the previous bank of sound buttons
 function navigatePreviousBank() {
     if (currentBankIndex > 0) {
         showBank(currentBankIndex - 1);
     }
 }
 
-// Function to navigate to next bank
+// Go to the next bank of sound buttons
 function navigateNextBank() {
     if (currentBankIndex < totalBanks - 1) {
         showBank(currentBankIndex + 1);
     }
 }
 
-// Function to show a specific bank
+// Show the sound bank by its number
 function showBank(index) {
     // Hide all banks
     sampleBanks.forEach(bank => {
         bank.style.display = 'none';
     });
-    
-    // Show the selected bank
+
+    // Show the one we want
     sampleBanks[index].style.display = 'grid';
-    
-    // Update current bank index
+
+    // Update the current number
     currentBankIndex = index;
-    
-    // Update the bank display
     currentBankDisplay.textContent = index + 1;
-    
-    // Update navigation buttons
+
+    // Update the visibility of next/previous buttons
     updateNavigationButtons();
 }
 
-// Function to update navigation buttons visibility
+// Show or hide next/previous buttons depending on the bank shown
 function updateNavigationButtons() {
-    // Hide/show previous button
-    if (currentBankIndex === 0) {
-        prevBankBtn.style.visibility = 'hidden';
-    } else {
-        prevBankBtn.style.visibility = 'visible';
-    }
-    
-    // Hide/show next button
-    if (currentBankIndex === totalBanks - 1) {
-        nextBankBtn.style.visibility = 'hidden';
-    } else {
-        nextBankBtn.style.visibility = 'visible';
-    }
+    prevBankBtn.style.visibility = currentBankIndex === 0 ? 'hidden' : 'visible';
+    nextBankBtn.style.visibility = currentBankIndex === totalBanks - 1 ? 'hidden' : 'visible';
 }
 
-// Function to handle text-to-speech
+// Speak the text from the text box out loud
 function speakText() {
     const text = speechTextArea.value.trim();
-    
+
     if (text) {
-        // Use the Web Speech API for text-to-speech
-        const speech = new SpeechSynthesisUtterance(text);
-        
-        // Optionally customize the voice
+        const speech = new SpeechSynthesisUtterance(text); // Create the speech message
+
+        // Try to use a UK English voice if available
         const voices = window.speechSynthesis.getVoices();
-        // Try to find a UK English voice for Alan Partridge
         const ukVoice = voices.find(voice => voice.lang === 'en-GB');
         if (ukVoice) {
             speech.voice = ukVoice;
         }
-        
-        // Speak the text
-        window.speechSynthesis.speak(speech);
+
+        window.speechSynthesis.speak(speech); // Speak the message
     }
 }
 
-// Function to load audio durations dynamically
+// Placeholder function for loading audio durations (not functional here)
 function loadAudioDurations() {
-    // This is a mock function as we can't actually load the audio files in this code example
-    // In a real implementation, you would load each audio file and read its duration
     console.log('Loading audio durations...');
-    // The durations are already set in the HTML, but in a real implementation
-    // you would update them here after loading the audio files
 }
 
-// Initialize when the DOM is loaded
+// Run setup when the page has fully loaded
 document.addEventListener('DOMContentLoaded', initSoundboard);
 
-// Preload audio for better performance
+// Preload audio files for faster loading later
 function preloadAudio() {
     const samples = document.querySelectorAll('.sample');
     samples.forEach(sample => {
@@ -140,19 +116,18 @@ function preloadAudio() {
     });
 }
 
-// Preload voices for text-to-speech
+// Load voices for text-to-speech feature
 function preloadVoices() {
-    // Some browsers need this event to load voices
     window.speechSynthesis.onvoiceschanged = () => {
         const voices = window.speechSynthesis.getVoices();
         console.log(`Loaded ${voices.length} voices for text-to-speech`);
     };
-    
-    // Force loading of voices
+
+    // Trigger voice loading
     window.speechSynthesis.getVoices();
 }
 
-// Call preload functions when the page loads
+// Start preloading audio and voices when everything is ready
 window.addEventListener('load', () => {
     preloadAudio();
     preloadVoices();

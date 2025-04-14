@@ -2,81 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Makes sure the website looks good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan Partridge Soundboard - Extended</title>
+    <!-- Connects this HTML to the CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Page header with logo and title -->
     <header>
         <div class="logo">PSYCHEDELIC FISH</div>
         <h1>Sample Bank <span id="current-bank">1</span></h1>
     </header>
     
     <main class="app-container">
+        
+        <!-- Section where the user can type and hear it spoken out loud -->
         <section class="text-to-speech">
             <textarea id="speech-text" placeholder="Type Here"></textarea>
             <button id="say-it">Say it</button>
         </section>
         
+        <!-- Section for the soundboard samples -->
         <section class="soundboard-container">
-            <!-- Sample Bank 1 -->
+            
+            <!-- First group of sounds (Sample Bank 1) -->
             <div class="sample-bank" data-bank="1">
+
+                <!-- Each sound block has a number, title, and time duration -->
                 <div class="sample" data-sample="ah-ha.mp3">
                     <div class="sample-number">1.</div>
                     <div class="sample-title">Ah-Ha</div>
                     <div class="sample-duration">1.4</div>
                 </div>
-                
+
                 <div class="sample" data-sample="dan.mp3">
                     <div class="sample-number">2.</div>
                     <div class="sample-title">Dan</div>
                     <div class="sample-duration">0.5</div>
                 </div>
-                
+
                 <div class="sample" data-sample="back-of-the-net.mp3">
                     <div class="sample-number">3.</div>
                     <div class="sample-title">Back of the net</div>
                     <div class="sample-duration">1.02</div>
                 </div>
-                
+
                 <div class="sample" data-sample="bangoutoforder.mp3">
                     <div class="sample-number">4.</div>
                     <div class="sample-title">Bang out of order</div>
                     <div class="sample-duration">1.38</div>
                 </div>
-                
+
                 <div class="sample" data-sample="emailoftheevening.mp3">
                     <div class="sample-number">5.</div>
                     <div class="sample-title">Email of the evening</div>
                     <div class="sample-duration">1.49</div>
                 </div>
-                
+
                 <div class="sample" data-sample="hellopartridge.mp3">
                     <div class="sample-number">6.</div>
                     <div class="sample-title">Hello Partridge</div>
                     <div class="sample-duration">1.91</div>
                 </div>
-                
+
                 <div class="sample" data-sample="iateascotchegg.mp3">
                     <div class="sample-number">7.</div>
                     <div class="sample-title">I ate a scotch egg</div>
                     <div class="sample-duration">1.49</div>
                 </div>
-                
+
                 <div class="sample" data-sample="imconfused.mp3">
                     <div class="sample-number">8.</div>
                     <div class="sample-title">I'm confused</div>
                     <div class="sample-duration">1.07</div>
                 </div>
-        
+
+        <!-- Buttons to move between sound groups (banks) -->
         <div class="navigation-controls">
             <button id="prev-bank" class="nav-arrow">&larr;</button>
             <button id="next-bank" class="nav-arrow">&rarr;</button>
         </div>
     </main>
-    
+
+    <!-- The audio element that actually plays the sound files -->
     <audio id="audio-player"></audio>
-    
+
+    <!-- Link to the JavaScript file that controls how the soundboard works -->
     <script src="index.js"></script>
+
 </body>
 </html>

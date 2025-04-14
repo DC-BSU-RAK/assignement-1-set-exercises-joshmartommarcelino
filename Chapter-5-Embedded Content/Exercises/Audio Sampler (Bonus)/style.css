@@ -1,4 +1,4 @@
-/* General Styles */
+/* Base styles for everything */
 * {
     margin: 0;
     padding: 0;
@@ -6,25 +6,28 @@
     font-family: Arial, sans-serif;
 }
 
+/* Main body of the page */
 body {
     background-color: #175959;
-    background-image: url('image_1.jpg');
-    min-height: 100vh;
+    background-image: url('image_1.jpg'); /* Adds a background picture */
+    min-height: 100vh; /* Make sure the page fills the whole screen */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
+/* Top section with logo and title */
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and title */
     align-items: center;
     margin-bottom: 30px;
     padding: 0 20px;
 }
 
+/* Logo text and icon */
 .logo {
     color: white;
     font-size: 1.2rem;
@@ -33,6 +36,7 @@ header {
     align-items: center;
 }
 
+/* White circle before the logo text */
 .logo::before {
     content: "";
     display: inline-block;
@@ -43,6 +47,7 @@ header {
     margin-right: 10px;
 }
 
+/* Big title text */
 h1 {
     color: white;
     font-size: 2rem;
@@ -50,7 +55,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* App Container */
+/* Container that holds the text-to-speech and soundboard */
 .app-container {
     display: flex;
     max-width: 1200px;
@@ -59,7 +64,7 @@ h1 {
     position: relative;
 }
 
-/* Text-to-Speech Section */
+/* Left side: type-and-speak section */
 .text-to-speech {
     flex: 1;
     display: flex;
@@ -67,6 +72,7 @@ h1 {
     gap: 10px;
 }
 
+/* Text area where you type */
 textarea {
     height: 200px;
     padding: 15px;
@@ -76,6 +82,7 @@ textarea {
     font-size: 1.2rem;
 }
 
+/* Speak button */
 #say-it {
     padding: 15px;
     background-color: black;
@@ -88,23 +95,26 @@ textarea {
     transition: background-color 0.3s;
 }
 
+/* Change color when hovered */
 #say-it:hover {
     background-color: #333;
 }
 
-/* Soundboard Grid */
+/* Right side: soundboard */
 .soundboard-container {
     flex: 2;
     display: flex;
     flex-direction: column;
 }
 
+/* Group of sound buttons */
 .sample-bank {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
     grid-gap: 10px;
 }
 
+/* Style for each sound button */
 .sample {
     background-color: white;
     border-radius: 8px;
@@ -120,6 +130,7 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Button hover effect */
 .sample:hover {
     background-color: #ff355e;
     color: white;
@@ -127,6 +138,7 @@ textarea {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Make every 2nd button (11n+2) have a pink background */
 .sample:nth-child(11n+2) {
     background-color: #ff355e;
     color: white;
@@ -136,28 +148,32 @@ textarea {
     background-color: #d92c4e;
 }
 
+/* Number on the sound button */
 .sample-number {
     font-size: 1rem;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/* Title on the sound button */
 .sample-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Duration of the sound */
 .sample-duration {
     font-size: 0.9rem;
     color: #666;
 }
 
+/* Change duration text color when hovering */
 .sample:hover .sample-duration {
     color: #fff;
 }
 
-/* Navigation Controls */
+/* Arrow buttons to change sound banks */
 .navigation-controls {
     position: absolute;
     bottom: -50px;
@@ -166,6 +182,7 @@ textarea {
     gap: 10px;
 }
 
+/* Style for arrow buttons */
 .nav-arrow {
     width: 40px;
     height: 40px;
@@ -180,36 +197,39 @@ textarea {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Arrow hover effect */
 .nav-arrow:hover {
     background-color: #f0f0f0;
 }
 
-/* Responsive Design */
+/* For tablets: stack the layout and keep 3 per row */
 @media (max-width: 992px) {
     .app-container {
         flex-direction: column;
     }
-    
+
     .text-to-speech {
         width: 100%;
     }
-    
+
     .sample-bank {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+/* For smaller screens: 2 sound buttons per row */
 @media (max-width: 768px) {
     .sample-bank {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* For phones: 1 sound button per row */
 @media (max-width: 480px) {
     .sample-bank {
         grid-template-columns: 1fr;
     }
-    
+
     header {
         flex-direction: column;
         gap: 10px;

@@ -1,53 +1,53 @@
-/* Using colors from the Rick Astley image */
+/* Custom colors picked from the Rick Astley image */
 :root {
     --dark-blue: #2d3b55;
     --light-purple: #c9c1d5;
     --white: #ffffff;
 }
 
-/* Reset and base styles */
+/* Reset browser defaults and set box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Creating gradient background similar to the poster */
+/* Set up the full screen with a cool gradient background */
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center content left to right */
+    align-items: center;      /* Center content top to bottom */
     background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-blue) 50%, var(--light-purple) 100%);
     font-family: Arial, sans-serif;
-    color: var(--white);
-    overflow: hidden;
+    color: var(--white); /* Makes text white */
+    overflow: hidden;    /* Hides scrollbars if content is too big */
 }
 
-/* Container for video with some styling */
+/* Box that holds the video and text */
 .video-container {
     text-align: center;
     max-width: 800px;
     width: 90%;
 }
 
-/* Video styling */
+/* Style the video to fit the box and look nice */
 video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;       /* Make the video fill the container */
+    height: auto;      /* Keep video proportions */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
-/* Optional title styling */
+/* Main title text above the video */
 h1 {
     margin-bottom: 20px;
     font-size: 2rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px; /* Spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow behind text */
 }
 
-/* Optional song title styling */
+/* Song title or smaller heading below the main title */
 h2 {
     margin-bottom: 30px;
     font-size: 1.5rem;

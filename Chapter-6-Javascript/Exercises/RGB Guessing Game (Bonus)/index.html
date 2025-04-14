@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Guessing Game</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with game title and RGB value display -->
+    <header>
+        <h1>RGB Color Guessing Game</h1>
+        <p>Can you identify the correct color?</p>
+        <div class="rgb-display" id="rgbDisplay">RGB(255, 255, 255)</div>
+    </header>
+    
+    <!-- Game information showing lives and score -->
+    <div class="game-info">
+        <div class="lives">Lives: <span id="lives">3</span></div>
+        <div class="score">Score: <span id="score">0</span></div>
+    </div>
+    
+    <!-- Container for color options -->
+    <div class="colors-container" id="colorsContainer">
+        <!-- Color boxes will be dynamically generated here -->
+    </div>
+    
+    <!-- Message display for feedback -->
+    <div class="message" id="message"></div>
+    
+    <!-- End game modal -->
+    <div class="modal" id="endGameModal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>You've run out of lives.</p>
+            <p>Your final score:</p>
+            <div class="final-score" id="finalScore">0</div>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>

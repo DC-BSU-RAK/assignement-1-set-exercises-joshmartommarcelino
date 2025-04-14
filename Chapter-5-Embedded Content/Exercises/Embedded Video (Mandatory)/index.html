@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Make sure the website works well on all screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Never Gonna Give You Up</title>
+    <!-- Link to the CSS file that styles the page -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Main container that holds the video and text -->
     <div class="video-container">
+        <!-- Big title -->
         <h1>RICK ASTLEY</h1>
+        <!-- Smaller subtitle -->
         <h2>NEVER GONNA GIVE YOU UP</h2>
+        
+        <!-- Video player settings:
+             - controls: adds play/pause buttons
+             - loop: makes the video replay after it ends
+             - muted: starts the video with no sound
+             - poster: shows an image before the video plays -->
         <video controls loop muted poster="image_1.jpg">
+            <!-- Source of the video -->
             <source src="Rick Astley - Never Gonna Give You Up (Official Music Video).mp4" type="video/mp4">
         </video>
     </div>
+
 </body>
 </html>

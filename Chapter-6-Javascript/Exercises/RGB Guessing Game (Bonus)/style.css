@@ -1,0 +1,240 @@
+/* Reset default spacing and set basic font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background and layout */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh; /* Makes sure page takes up full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Top section of the page */
+header {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Big title text */
+h1 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+/* RGB value display box */
+.rgb-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+}
+
+/* Section that shows score and lives */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lives (hearts or numbers) */
+.lives {
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+.lives span {
+    font-weight: bold;
+}
+
+/* Score display */
+.score {
+    font-size: 1.2rem;
+    color: #27ae60;
+}
+
+.score span {
+    font-weight: bold;
+}
+
+/* Grid that holds all the color choices */
+.colors-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 boxes in a row */
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Each color box */
+.color-box {
+    aspect-ratio: 1 / 1; /* Keeps boxes square */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for color box */
+.color-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Feedback message (right or wrong) */
+.message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Message when the answer is correct */
+.correct {
+    background-color: #d4edda;
+    color: #155724;
+    opacity: 1;
+}
+
+/* Message when the answer is wrong */
+.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    opacity: 1;
+}
+
+/* Game over popup that appears in the center */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Box inside the popup */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFade 0.5s ease;
+}
+
+/* Animation for showing the popup */
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title inside the popup */
+.modal h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Text inside the popup */
+.modal p {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Score inside the popup */
+.modal .final-score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin: 20px 0;
+}
+
+/* Button style */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Make layout look better on tablets */
+@media (max-width: 768px) {
+    .colors-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Make layout fit better on phones */
+@media (max-width: 480px) {
+    .colors-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .rgb-display {
+        font-size: 1.4rem;
+    }
+
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
